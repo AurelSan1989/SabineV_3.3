@@ -19,6 +19,7 @@
     text-transform: uppercase;
     text-decoration: underline;
     color: var(--blanc);
+    margin-bottom: 20px;
 }
 
 .article_title_pedagogie_center{
@@ -26,6 +27,7 @@
     text-decoration: underline;
     text-align: center;
     color: var(--blanc);
+    margin-bottom: 20px;
 }
 
 .article_contain_pedagogie p {

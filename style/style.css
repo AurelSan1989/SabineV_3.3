@@ -189,6 +189,10 @@ a:hover {
     color: var(--blanc-dim);
 }
 
+.header-nav_bar a.active {
+    color: var(--blanc-dim);
+}
+
 /* Dropdown desktop */
 
 .dropdown {
@@ -226,14 +230,14 @@ a:hover {
 }
 
 .dropdown-content a {
-    color: var(--blanc-dim);
+    color: var(--blanc);
     padding: 12px 16px;
     display: block;
     transition: color 0.2s;
 }
 
 .dropdown-content a:hover {
-    color: var(--blanc);
+    color: var(--blanc-dim);
 }
 
 .dropdown:hover .dropdown-content {
@@ -634,7 +638,7 @@ footer {
 .underline        { text-decoration: underline; }
 .bold             { font-weight: bold; }
 .image_center     { width: 500px; margin: 0 auto; }
-.very-white       { color: var(--blanc); }
+.very-white       { color: var(--blanc); }         
 
 #etoiles {
     margin: 0 auto;
@@ -693,13 +697,21 @@ footer {
 
 @media (max-width: 795px) {
 
+    /* Body */
+    body {
+        overflow-x: hidden;
+    }
+
     /* Main */
     .main {
-        max-width: 795px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 16px;   /* marge respirante sur les côtés */
     }
 
     .main article {
         width: 100%;
+        box-sizing: border-box;
     }
 
     .article_contain {
@@ -712,20 +724,33 @@ footer {
     }
 
     .article_contain div {
+        width: 100%;
+    }
+
+    /* .article_footer {
         width: 90%;
         margin: auto;
     }
 
-    .article_footer {
+    .article_footer div {
+        width: 90%;
+    }
+
+    .article_footer img {
         width: 90%;
         margin: auto;
+    }
+
+    .article_footer iframe {
+        width: 90%;
+        height: fit-content;
     }
 
     .article_contain_last {
         width: 90%;
         margin: auto;
         grid-template-columns: 1fr;
-    }
+    } */
 
     /* Header — titres */
     .header-title { font-size: 28px; padding-top: 20px; }
@@ -733,12 +758,21 @@ footer {
     .header h2:not(.header-title_second) { font-size: 14px; text-align: center; padding: 0 16px; }
 
     /* Header -- Logo */
+    #logo-link {
+        top: 0;
+        left: 0;
+    }
+
     #logo-link img {
-        width: 80px;
+        width: 60px;
     }
 
     /* Hamburger */
-    .hamburger { display: flex; }
+    .hamburger { 
+        display: flex; 
+        top: 5px;
+        right: 5px
+    }
 
     /* Nav cachée par défaut */
     .header-nav_bar {

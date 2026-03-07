@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/lightbox.css">
 </head>
 <body>
     <header class="header">
@@ -39,7 +40,7 @@
             <div class="dropdown-content">
                 <a href="pedagogie.html">Ma pédagogie</a>
                 <a href="methode.html">Mes méthodes</a>
-                <a href="parcours.html">Des parcours personnalisés</a>
+                <a href="parcours.html" class="active">Des parcours personnalisés</a>
                 <a href="cours.html">Cours et stages</a>
             </div>
         </div>
@@ -52,11 +53,13 @@
     </header>
     <main class="main">
         <article>
-            <h1 class="article_title">Le choix inconditionnel des cours particuliers individuels</h1>
-            <img src="img/parcours/parcours_1.jpg" alt="" class="image_center">
+            <div class="article_contain">
+                <h1 class="article_title">Le choix inconditionnel des cours particuliers individuels</h1>
+                <img src="img/parcours/parcours_1.jpg" alt="" class="image_center">
+            </div>
         </article>
         <article>
-            <div class="article_footer">
+            <div class="article_contain">
                 <div>
                     <p>
                     J’ai enseigné 10 années à la Schola Cantorum et plusieurs conservatoires parisiens, ce fut une expérience passionnante et enrichissante. <br>
@@ -103,47 +106,13 @@
             </div>
         </article>
         <article>            
-            <div class="article_contain article-lightbox">
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/parcours/omar_1.JPG" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/parcours/omar_2.JPG" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/parcours/omar_3.JPG" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/parcours/omar_4.JPG" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/parcours/Omar_5.JPG" alt="" class="image-resize">
-                    </a>
-                </div>
-                <div id="lightbox">
-                    <img src="" alt="media" class="image-lightbox_parcours">
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="exit">
-                        <span class="material-symbols-outlined">
-                            close
-                        </span>
-                    </a>
-                </div>
-                <script>
-                    function lightbox(event){
-                        if(event.target){
-                            const img = event.target.src;
-                            const imgLightbox = document.querySelector("#lightbox img");
-                            imgLightbox.src = img;
-                            const lightbox = document.getElementById("lightbox");
-                            lightbox.classList.toggle("active");
-                        }
-                        else{
-                            const lightbox = document.getElementById("lightbox");
-                            lightbox.classList.toggle("active");
-                        }
-
-                    }
-                </script>
+            <div class="galerie">
+                <img src="img/parcours/omar_1.JPG" alt="Audition élèves espace Steinway">
+                <img src="img/parcours/omar_2.JPG" alt="Audition élèves espace Steinway">
+                <img src="img/parcours/omar_3.JPG" alt="Audition élèves espace Steinway">
+                <img src="img/parcours/omar_4.JPG" alt="Audition élèves espace Steinway">
+                <img src="img/parcours/Omar_5.JPG" alt="Audition élèves espace Steinway">
+            </div>
         </article>
     </main>
     <aside>

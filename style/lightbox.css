@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.link-galery{
+    display: block;
+    width: 380px;
+}
+
+.link-galery img{
+    width: 100%;
+}
+
+#lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#lightbox.active {
+    display: flex;
+}
+
+.exit{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 10%;
+    right: 12%;
+}
+
+.image-resize{
+    width: 400px;
+}
+
+.article-lightbox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#lightbox .image-lightbox{
+    max-width: 600px;
+}
+
+#lightbox .image-lightbox_parcours{
+    max-width: 1000px;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabine Miniconi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header class="header">
+
+    <!-- AJOUT 1 : checkbox invisible, doit être AVANT tout le reste -->
+    <input type="checkbox" id="menu-toggle">
+
+    <div class="header-link">
+        <a href="index.html" id="logo-link">
+            <img src="img/header/logo_noir_fond_transparent.png" alt="Logo Sabine" class="logo-black">
+            <img src="img/header/logo_blanc_fond_transparent.png" alt="Logo Sabine" class="logo-white">
+        </a>
+        <h1 class="header-title">
+            <a href="index.html">Sabine Miniconi</a>
+        </h1>
+        <!-- AJOUT 2 : le bouton hamburger (label lié à la checkbox) -->
+        <label for="menu-toggle" class="hamburger" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+    <h2 class="header-title_second">Pianiste, pédagogue et concertiste</h2>
+    <h2>Créatrice et animatrice du café philo parisien de L'EST/ETHIQUE</h2>
+
+    <nav class="header-nav_bar">
+        <div class="dropdown">
+            <!-- AJOUT 3 : checkbox pour le sous-menu sur mobile -->
+            <!-- <input type="checkbox" id="dd-ecole" class="dd-toggle"> -->
+            <span class="dropbtn">école piano chant Paris Est</span>
+            <div class="dropdown-content">
+                <a href="pedagogie.html">Ma pédagogie</a>
+                <a href="methode.html">Mes méthodes</a>
+                <a href="parcours.html">Des parcours personnalisés</a>
+                <a href="cours.html">Cours et stages</a>
+            </div>
+        </div>
+        <a href="philo.html">Mes cafés philos</a>
+        <a href="spectacle.html">Mes spectacles piano et poésie</a>
+        <a href="programmation.html">Programmation</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    </header>
+    <main class="main">
+        <article>
+            <h1 class="article_title">Panorama de mes activités</h1>
+            <div class="article_contain">
+                <img src="img/index/index1_crop.jpg" alt="Photo de sabine" class="article_image">
+                <div>
+                    <p>Sabine Miniconi n'est pas une pianiste comme les autres. <br> <br>
+                    Quand elle n'enseigne pas le piano, ou le chant, et ce avec passion dans sa propre école PIANO/CHANT de PARIS EST, <br> elle est sur scène. <br> <br>
+                    Des créations originales de SPECTACLE PIANO/POESIE depuis 20 ans sur les scènes parisiennes....<br>
+                    Ou l’animation de son propre café philo de L’EST/ETHIQUE, événement mensuel depuis 25 ans <br> 
+                    ou encore son PHILOSOPH’ART, atelier de réflexion et de pratique autour de l’art et de l’esthétique. <br> <br>
+                    Avec son esprit joyeux, même si elle joue au piano la musique classique dans sa forme la plus pure, telle qu'elle a été écrite, son interprétation musicale dans une expression créative et personnelle, en résonance avec des textes poétiques modernes ou contemporains donne un résultat superbe !</p>
+                </div>                
+            </div>
+            <div class="article_footer">
+                <div>
+                    <p>Tout cela se passe dans des lieux culturels authentiques,</p>
+                    <p><span class="uppercase">Le Connetable, Le Kibélé, La Rare Gallery, Galerie Escalier D’Art, Zindem’ Café</span> et bien d'autres !</p>
+                    <p>Ou encore des théâtres comme celui de <span class="uppercase">L'île Saint-Louis, Le passage vers les étoiles</span></p>
+                </div>
+                
+            </div>
+        </article>
+        <article>
+            <h1 class="article_title">Découvrez mon parcours professionnel et artistique</h1>           
+            <div class="article_contain">                
+                <div>
+                    <p>
+                        <span class="texte_important">La musique et le piano m’ont accompagné tout au long de ma vie.</span> 
+                        <br>
+                        J’ai donc commencé ma pratique de l’instrument à 5 ans, en 1963 pour ne jamais plus l’arrêter. 
+                        <br> <br>
+                        Mon arrivée à PARIS en 1978 m’a permis de prendre contact avec de grands pédagogues parisiens : Ribisky, Monique Déchaussées, et en particulier Lise JACOB (mère de l’éditrice Odile JACOB). 
+                        <br>
+                        Cette dernière rencontre m’a fait opter pour le chemin de la pédagogie musicale avec : 
+                        <br>
+                        la création du  diplôme de <span class="uppercase">pédagogie du piano et du chant</span> <br>
+                        à LA SCOLA CANTORUM que j’ai obtenu en 1984, <br>
+                        avant d’avoir la joie de découvrir l’expérience de concertiste et de monter sur scène en 2000. 
+                        <br> <br>
+                        <span class="texte_important">Mais en parallèle de cela, j’ai effectué un parcours universitaire plus traditionnel</span> 
+                        <br> <br>
+                        Bac C à 16 ans, des études littéraires (maîtrise et agrégation de lettres) à PARIS 7, licence de psychologie et de philosophie à PARIS...
+                    </p>
+                </div>
+                <img src="img/index/index2_crop_resize.jpg" alt="Exemple" class="article_image">         
+            </div>
+            <div class="article_footer">
+                <p>
+                    Mon contact étroit avec la psychanalyse et ma propre analyse m’ont poussé à la fréquentation des cafés philos parisiens, <br>
+                    et <span class="texte_important">à la création ensuite de mon propre café philo à PARIS, café de L’EST/ETHIQUE, mensuel, un dimanche par mois.</span>
+                    <br> <br>
+                    En parallèle, la fréquentation des cercles poétiques parisiens ont inspiré l’élaboration <br>
+                    de mes <span class="uppercase">spectacles piano/poésie</span>...
+                    <br> <br>
+                    <span class="uppercase">pédagogie, création artistique, recherche d'harmonie de vie, poésie, philosophie...</span> <br>
+                    Autant de sujets et de pratiques qui se côtoient sans cesse dans ma vie, rentrant en résonance constructive en permanence. 
+                    <br> 
+                    <br>
+                    <span class="uppercase">Mon âme intérieure, mon tempérament et mon désir profond d'échanges ne font que me pousser chaque jour à continuer, progresser, aller de l'avant.</span>
+                </p>
+            </div>              
+        </article>
+        <article>
+            <h1 class="article_title title-papy">Mon grand-père : Ange-Marie Miniconi</h1>
+            <div class="article_contain">
+                <img src="img/index/index3_resize.jpg" alt="Photo de mon grand grand-père" class="article_image">
+                <div>
+                    <h2>Discours de Sabine MINICONI, prononcé lors de l’inauguration de l’école "ANGE-MARIE MINICONI "</h2>
+                    <p>Beaucoup d’émotion en cet instant. Un moment pour bien sûr concrétiser l’hommage qu’il y a à rendre à mon grand père, Ange-Marie Miniconi dont j’ai pu être proche toute ma vie jusqu’à sa disparition en 1988. <br>
+                    Je ne développerai pas la base de l’homme politique, résistant ayant organisé avec plusieurs compagnons FTP la résistance sur la Côte d’Azur. Beaucoup de personnes encore présentes à ce jour ont pu vivre ce moment de la deuxième guerre mondiale. Des événements d’ailleurs très bien rapportés dans le livre que Peter Leslie a consacré à mon grand père : <b>« The liberation of the riviera : la résistance dans le sud de la France et l’histoire de son héroïque leader le commandant Jean-Marie »</b> en vente sur Internet et aux USA. <br>
+                    Mais ce qui est merveilleux dans ces minutes, c’est d’avoir donné le nom d’une école à mon grand père, lui-même instituteur toute sa vie. Cet acte de transmission est en osmose avec le métier d’enseignant tel qu’il le concevait et tel que je le conçois moi-même dans mes activités pédagogiques qui alternent avec mes concerts. <br>
+                    Enseignant, un métier à vocation faisant sens dans sa propre vie. Un métier de transmission et surtout pas de pouvoir, ni de commerce. Un métier qui se crée au jour le jour se rapprochant ainsi de l’art ou de la philosophie telle que la concevait les Grecs.
+                    </p>
+                </div>  
+            </div>
+            <div class="article_contain">
+                <div>
+                    <p>
+                    D’ailleurs, je tiens à signaler que mon grand-père avait une âme d’artiste lorsqu’il chantait d’une voix admirable, pouvait jouer au piano sans avoir pris de cours, ou encore prenait sans cesse des photos d’une grande esthétique. Brillant danseur de tango, il faisait résonner cette danse dans le surnom qu’il avait choisi pour une autre passion (radioamateur) : » <b>N</b>euf <b>T</b>ango <b>O</b>scar » : il avait déjà son face book dans les années 50 ! <br>
+                    Oui, rendre hommage à un résistant est très important pour les nombreux enfants qui vont fréquenter cette école. Sur le plan historique bien sûr. Mais aussi sur le plan éthique. <br>
+                    Le mot résistant prend pour moi à ce jour une connotation morale. Dans la dureté de chaque vie, lorsque porteur d’une éthique, d’un projet humain on ne veut pas tomber dans la violence ou dans la bassesse humaine, la résistance devient réelle, magnifique : poursuivre ses projets de création, d’amour tout en se protégeant des dangers et des agressions.
+                    </p>
+                </div>
+                <img src="img/index/index4.jpg" alt="Photo du livre 'The liberation of the riviera'" class="article_image">
+            </div> 
+            <div class="article_footer">
+                <p>
+                    Un de mes spectacles récents s’est intitulé <b>« la résistance radieuse »</b>. <br>
+                    Ce n’est pas un hasard. <br>
+                    Là encore en moi, je savais qu’il doit y avoir dans une vie concrétisation du courage, de l’amour que mon grand-père portait à la Vie, aux Hommes et à la Culture. <br>
+                    Voilà : cela est fait, nous en sommes les témoins. Cet instant est pour moi un acte de création, une action de transmission intergénérationnelle. <br>
+                    D’ailleurs, je tiens à souligner que mon fils, Aurélien, considère son arrière grand-père comme la base de ses références masculines. <br>
+                    Enfin, je tiens à la fin de cette intervention à envoyer une pensée à Claire Miniconi, ma grand-mère. Elle a 98 ans aujourd’hui, se trouve en maison de retraite dans le nord de la France. Elle aussi a été institutrice et elle a été très présente lors de la résistance à Cannes. <br>
+                    Encore merci à tous. <br>
+                    <b>Sabine Miniconi</b> <br> <br>
+                    Vous trouverez plus d'informations sur mon Grand-père en suivant ce lien  <a href="https://fr.wikipedia.org/wiki/Ange-Marie_Miniconi"> <b>Wikipedia</b></a>.
+                </p>
+            </div>
+        </article>
+    </main>
+    <aside>
+        <a href="#top" class="back-to-top" aria-label="Retour en haut">
+          ↑
+        </a>
+    </aside>
+    <footer>
+        <div class="social-bar">
+           <div class="facebook">
+                <a href="https://www.facebook.com/sabine.miniconi" target="_blank"><img src="img/social-logo/facebook.png" class="social-logo" alt="Lien vers le Facebook de Sabine"> Facebook</a>
+           </div>
+           <div class="instagram">
+                <a href="https://www.instagram.com/sabineminiconi/" target="_blank"><img src="img/social-logo/instagram.png" class="social-logo" alt="Lien vers l'instagram de Sabine"> Instagram</a>
+           </div>
+           <div class="phone">
+                <a href="tel:+33679839883"><span class="social-logo">📞</span> 06 79 83 98 83</a>
+           </div>
+           <div class="mail">
+                <a href="mailto:sab.pianiste@orange.fr"><span class="social-logo">✉️</span> sab.pianiste@orange.fr</a>
+           </div>
+        </div>
+        <div class="copyright">Crée par Aurélien Girodet</div>
+    </footer>
+</body>
+</html>

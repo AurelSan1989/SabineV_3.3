@@ -1,0 +1,21 @@
+________________________________### A FAIRE ENSEMBLE ###_________________________________________________
+
+
+=> Changer le title dans le head pour toutes les pages
+
+=> Se mettre d'accord pour un header cohérent sur toutes les pages
+
+=> Ajouter une descriptions pour les images sur toutes les pages
+
+________________________________### PAGE SPECTACLE ET PARCOURS ###_________________________________________________
+                        RESPONSIVE
+            => Réfléchir à une disposition différentes pour la lightbox, et voir si on peut la laisser active 
+
+    ---> ATTENTION : on ne voit plus le bouton pour fermer (caché par le header)
+        ---> Faire en sorte de cliquer n'importe ou sur l'écran pour fermer la photo
+    ---> ATTENTION : L'image est tronqué (caché par le header)
+        ---> La redimensioner en prenant en compte le header ou en passant par dessus
+
+            => Verifier les distances dans le main
+
+            ==> ajouter un compteur de vues sur le site ou se renseigner pour pouvoir consulter les statistiques du site 

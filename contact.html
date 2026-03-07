@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabine Miniconi | Contactez-moi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header class="header">
+
+    <!-- AJOUT 1 : checkbox invisible, doit être AVANT tout le reste -->
+    <input type="checkbox" id="menu-toggle">
+
+    <div class="header-link">
+        <a href="index.html" id="logo-link">
+            <img src="img/header/logo_noir_fond_transparent.png" alt="Logo Sabine" class="logo-black">
+            <img src="img/header/logo_blanc_fond_transparent.png" alt="Logo Sabine" class="logo-white">
+        </a>
+        <h1 class="header-title">
+            <a href="index.html">Sabine Miniconi</a>
+        </h1>
+        <!-- AJOUT 2 : le bouton hamburger (label lié à la checkbox) -->
+        <label for="menu-toggle" class="hamburger" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+
+    <nav class="header-nav_bar">
+        <div class="dropdown">
+            <!-- AJOUT 3 : checkbox pour le sous-menu sur mobile -->
+            <!-- <input type="checkbox" id="dd-ecole" class="dd-toggle"> -->
+            <span class="dropbtn">école piano chant Paris Est</span>
+            <div class="dropdown-content">
+                <a href="pedagogie.html">Ma pédagogie</a>
+                <a href="methode.html">Mes méthodes</a>
+                <a href="parcours.html">Des parcours personnalisés</a>
+                <a href="cours.html">Cours et stages</a>
+            </div>
+        </div>
+        <a href="philo.html">Mes cafés philos</a>
+        <a href="spectacle.html">Mes spectacles piano et poésie</a>
+        <a href="programmation.html">Programmation</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    </header>
+    <main class="main">
+        <article>
+            <div class="article_contain">
+                <img src="img/contact/contact_1-600.jpg" alt="Sabine" class="article_image">
+                <div class="grid-column">
+                    <p>
+                        <span class="uppercase">à bientôt</span> <br>
+                        N’hésitez pas à me contacter !
+                    </p>
+                    <p>
+                        Si vous désirez suivre mon actualité, vous pourrez retrouver mes réseaux sociaux :                          
+                    </p>
+                    <div class="contact-link">
+                        <a href="https://www.instagram.com/sabineminiconi/" target="_blank"><img src="img/social-logo/instagram.png"class="social-logo" alt="Lien vers l'instagram de Sabine"> Instagram</a> & <a href="https://www.facebook.com/sabine.miniconi" target="_blank"><img src="img/social-logo/facebook.png"class="social-logo" alt="Lien vers le Facebook de Sabine"> Facebook</a>
+                    </div>
+                    <p>
+                        Si vous désirez recevoir ma newsletter : envoyez-moi un premier mail d'inscription à <a href="mailto:sab.pianiste@orange.fr">sab.pianiste@orange.fr</a>
+                    </p>
+                </div>
+            </div>
+            <div class="article_contain">
+                
+            </div>
+
+        </article>
+    </main>
+    <aside>
+        <a href="#top" class="back-to-top" aria-label="Retour en haut">
+          ↑
+        </a>
+    </aside>
+    <footer>
+        <div class="social-bar">
+           <div class="facebook">
+                <a href="https://www.facebook.com/sabine.miniconi" target="_blank"><img src="img/social-logo/facebook.png" class="social-logo" alt="Lien vers le Facebook de Sabine"> Facebook</a>
+           </div>
+           <div class="instagram">
+                <a href="https://www.instagram.com/sabineminiconi/" target="_blank"><img src="img/social-logo/instagram.png" class="social-logo" alt="Lien vers l'instagram de Sabine"> Instagram</a>
+           </div>
+           <div class="phone">
+                <a href="tel:+33679839883"><span class="social-logo">📞</span> 06 79 83 98 83</a>
+           </div>
+           <div class="mail">
+                <a href="mailto:sab.pianiste@orange.fr"><span class="social-logo">✉️</span> sab.pianiste@orange.fr</a>
+           </div>
+        </div>
+        <div class="copyright">Crée par Aurélien Girodet</div>
+    </footer>
+</body>
+</html>

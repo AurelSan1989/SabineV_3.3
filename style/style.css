@@ -1,0 +1,798 @@
+/* ================================================
+   style.css — fichier fusionné (header + style)
+   ================================================ */
+
+
+/* ===== VARIABLES ===== */
+
+:root {
+    --rouge: #530000;
+    --rouge-light: #6b0000;
+    --rouge-dark: #3a0000;
+    --blanc: rgba(255, 255, 255, 0.85);
+    --blanc-dim: rgba(255, 255, 255, 0.5);
+    --accent: #c49a5a;
+    --font: "Bodoni Moda", serif;
+}
+
+
+/* ===== BASE ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    background: var(--rouge);
+    color: var(--blanc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    min-height: 100dvh;
+}
+
+a {
+    color: var(--blanc-dim);
+    text-decoration: none;
+    transition: color .25s;
+}
+
+a:hover {
+    color: var(--blanc);
+}
+
+
+/* =================================================
+   HEADER
+   ================================================= */
+
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--rouge);
+}
+
+/* Logo */
+
+.logo-black,
+.logo-white {
+    width: 150px;
+}
+
+.logo-white {
+    display: none;
+}
+
+#logo-link {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 100;
+}
+
+#logo-link:hover > .logo-black {
+    display: none;
+}
+
+#logo-link:hover > .logo-white {
+    display: block;
+}
+
+/* Bloc titre */
+
+.header-link {
+    display: flex;
+    gap: 50px;
+}
+
+.header-title {
+    margin: 0;
+    padding-top: 30px;
+    font-size: 45px;
+}
+
+.header-title a {
+    color: var(--blanc);
+}
+
+.header-title a:hover {
+    color: var(--blanc);
+}
+
+.header-title_second {
+    font-size: 35px;
+    margin: 5px auto;
+    color: var(--blanc-dim);
+}
+
+.header h2 {
+    color: var(--blanc-dim);
+}
+
+/* Checkbox interrupteur hamburger — invisible */
+
+#menu-toggle {
+    display: none;
+}
+
+.dd-toggle {
+    display: none;
+}
+
+/* Bouton hamburger — caché sur desktop */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--blanc);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Animation 3 barres → croix */
+#menu-toggle:checked ~ .header-link .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+#menu-toggle:checked ~ .header-link .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle:checked ~ .header-link .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Barre de navigation desktop */
+
+.header-nav_bar {
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 25px auto;
+    max-width: fit-content;
+    padding: 0 20px;
+    font-weight: 700;
+}
+
+.header-nav_bar > * {
+    font-size: 22px;
+    white-space: nowrap;
+    color: var(--blanc);
+}
+
+.header-nav_bar a:hover {
+    color: var(--blanc-dim);
+}
+
+/* Dropdown desktop */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    color: var(--blanc);
+    text-transform: uppercase;
+    background: none;
+    font-size: 22px;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.dropbtn:hover {
+    color: var(--blanc-dim);
+}
+
+.dropdown-content {
+    display: none;
+    background-color: var(--rouge);
+    position: absolute;
+    min-width: 350px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: var(--blanc-dim);
+    padding: 12px 16px;
+    display: block;
+    transition: color 0.2s;
+}
+
+.dropdown-content a:hover {
+    color: var(--blanc);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* =================================================
+   MAIN & ARTICLES
+   ================================================= */
+
+.main {
+    max-width: 1400px;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 150px;
+}
+
+.main article {
+    width: 90%;
+    margin: auto;
+}
+
+.main h1 {
+    font-size: 33px;
+    text-align: center;
+    color: var(--blanc);
+}
+
+.main img {
+    transition: transform .3s ease-in-out;
+}
+
+.main img:hover {
+    transform: scale(1.02);
+}
+
+/* Article */
+
+article {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 100px;
+    color: var(--blanc-dim);
+}
+
+.article_title {
+    margin-bottom: 60px;
+}
+
+.article-subtitle {
+    color: var(--blanc);
+    margin-bottom: 30px;
+}
+
+.article-subtitle_center {
+    text-align: center;
+}
+
+.article_contain {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.article_contain p {
+    opacity: .8;
+    font-size: 19px;
+}
+
+.article_contain div a {
+    font-size: inherit;
+    transition: all .5s ease-in-out;
+    color: var(--blanc-dim);
+}
+
+.article_contain div a:hover {
+    font-size: 17px;
+    color: var(--blanc);
+}
+
+.article_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+    font-size: 19px;
+    color: var(--blanc-dim);
+}
+
+.article_photo {
+    display: flex;
+    flex-direction: column;
+}
+
+.article_photo img:nth-of-type(1) { align-self: flex-start; }
+.article_photo img:nth-of-type(2) { align-self: flex-end; }
+.article_photo img:nth-of-type(3) { align-self: flex-start; }
+.article_photo img:nth-of-type(4) { align-self: flex-end; }
+
+/* Parcours */
+
+.parcours .article_contain:first-of-type {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.parcours .article_contain:last-of-type {
+    margin-bottom: 100px;
+}
+
+.main .title-papy {
+    margin-top: 150px;
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+/* École */
+
+.article_contain_ecole > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.article_contain_ecole p {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.article_contain_ecole img:nth-of-type(1) { align-self: flex-start; }
+.article_contain_ecole img:nth-of-type(2) { align-self: flex-end; }
+.article_contain_ecole img:nth-of-type(3) { align-self: flex-start; }
+.article_contain_ecole img:nth-of-type(4) { align-self: flex-end; }
+
+ /* Méthode */
+
+ .methode_subtitle{
+    margin: 10px 0;
+    color: var(--blanc);
+}
+
+.article_contain_list li,
+.article_contain_list ul{
+    font-size: 19px;
+    text-align: left;
+    opacity: .8;    
+}
+
+
+.article_contain_last {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 250px;
+}
+
+/* Cours */
+
+.article_contain_list li,
+.article_contain_list ul{
+    font-size: 19px;
+    text-align: left;
+    opacity: .8;    
+}
+
+.article_contain_list li{
+    margin: 10px 0;
+}
+
+#article_contain_cours{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#article_contain_cours > div{
+    flex: 1;
+    margin: 0 !important;
+}
+
+.bigtext{
+    font-size: 24px;
+}
+
+.article_contain_last {
+    margin-top: 80px;
+}
+
+.article_title_cours{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/* Contact */
+
+.grid-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;    
+    gap: 10px;
+}
+
+.contact-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* =================================================
+   LIGHTBOX
+   ================================================= */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.link-galery{
+    display: block;
+    width: 380px;
+}
+
+.link-galery img{
+    width: 100%;
+}
+
+#lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#lightbox.active {
+    display: flex;
+}
+
+.exit{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 10%;
+    right: 12%;
+}
+
+.image-resize{
+    width: 400px;
+}
+
+.article-lightbox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#lightbox .image-lightbox{
+    max-width: 600px;
+}
+
+#lightbox .image-lightbox_parcours{
+    max-width: 1000px;
+}
+
+/* =================================================
+   ASIDE — retour en haut
+   ================================================= */
+
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(33, 37, 41, 0.8);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease-out, background-color 0.25s ease-out;
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px) scale(1.05);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+
+/* =================================================
+   FOOTER
+   ================================================= */
+
+footer {
+    margin-top: auto;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 40px 24px;
+    background: var(--rouge-dark);
+    width: 100%;
+}
+
+.social-bar {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    font-size: 25px;
+}
+
+.social-bar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 30px;
+}
+
+.social-bar a:hover {
+    color: var(--blanc);
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.social-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: var(--blanc-dim);
+    opacity: .5;
+}
+
+
+/* =================================================
+   UTILITAIRES
+   ================================================= */
+
+.uppercase        { text-transform: uppercase; }
+.underline        { text-decoration: underline; }
+.bold             { font-weight: bold; }
+.image_center     { width: 500px; margin: 0 auto; }
+.texte_important  { font-weight: 700; color: var(--blanc); }
+
+#etoiles {
+    margin: 0 auto;
+}
+
+
+/* =================================================
+   RESPONSIVE DESKTOP (réduction progressive)
+   ================================================= */
+
+@media (max-width: 1600px) {
+    .header-nav_bar { gap: 30px; }
+    .header-nav_bar > * { font-size: 20px; }
+    .dropbtn { font-size: 20px; }
+}
+
+@media (max-width: 1400px) {
+    .header-nav_bar { gap: 25px; }
+    .header-nav_bar > * { font-size: 19px; }
+    .dropbtn { font-size: 19px; }
+}
+
+@media (max-width: 1300px) {
+    .header-nav_bar { gap: 20px; }
+    .header-nav_bar > * { font-size: 18px; }
+    .dropbtn { font-size: 18px; padding: 10px 12px; }
+}
+
+@media (max-width: 1200px) {
+    .header-nav_bar { gap: 15px; }
+    .header-nav_bar > * { font-size: 17px; }
+    .dropbtn { font-size: 17px; padding: 10px 10px; }
+}
+
+@media (max-width: 1100px) {
+    .header-nav_bar { gap: 12px; }
+    .header-nav_bar > * { font-size: 16px; }
+    .dropbtn { font-size: 16px; padding: 8px 10px; }
+}
+
+
+/* =================================================
+   RESPONSIVE TABLETTE
+   ================================================= */
+
+@media (max-width: 1024px) {
+    /* À compléter selon vos besoins */
+}
+
+
+/* =================================================
+   RESPONSIVE MOBILE
+   Ces règles sont en dernier pour écraser
+   correctement toutes les règles desktop.
+   ================================================= */
+
+@media (max-width: 795px) {
+
+    /* Main */
+    .main {
+        max-width: 795px;
+    }
+
+    .main article {
+        width: 100%;
+    }
+
+    .article_contain {
+        grid-template-columns: 1fr;
+    }
+
+    .article_contain img {
+        width: 90%;
+        margin: auto;
+    }
+
+    .article_contain div {
+        width: 90%;
+        margin: auto;
+    }
+
+    .article_footer {
+        width: 90%;
+        margin: auto;
+    }
+
+    .article_contain_last {
+        width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
+
+    /* Header — titres */
+    .header-title { font-size: 28px; padding-top: 20px; }
+    .header-title_second { font-size: 18px; text-align: center; padding: 0 16px; }
+    .header h2:not(.header-title_second) { font-size: 14px; text-align: center; padding: 0 16px; }
+
+    /* Header -- Logo */
+    #logo-link img {
+        width: 80px;
+    }
+
+    /* Hamburger */
+    .hamburger { display: flex; }
+
+    /* Nav cachée par défaut */
+    .header-nav_bar {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        margin: 0;
+        padding: 12px 0 16px;
+        background: var(--rouge-dark);
+        max-width: 100%;
+    }
+
+    /* Nav visible quand checkbox cochée */
+    #menu-toggle:checked ~ .header-nav_bar {
+        display: flex;
+    }
+
+    /* Style commun à tous les liens du menu mobile */
+    .header-nav_bar > a,
+    .header-nav_bar .dropdown-content a {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        white-space: normal;
+        display: block;
+        color: var(--blanc-dim);
+        box-sizing: border-box;
+    }
+
+    /* Cacher le label "école piano chant" — ses liens sont affichés à plat */
+    .dropdown > .dropbtn {
+        display: none;
+    }
+
+    .header-nav_bar > .dropdown {
+        padding: 0;
+        border-bottom: none;
+        width: 100%;
+    }
+
+    /* Les 4 liens du dropdown toujours visibles à plat sur mobile */
+    .dropdown-content {
+        display: block;
+        position: static;
+        min-width: unset;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background: transparent;
+        animation: none;
+    }
+
+    /* Neutraliser le hover desktop */
+    .dropdown:hover .dropdown-content {
+        animation: none;
+    }
+
+    /* Footer */
+    .social-bar {
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* À compléter selon vos besoins */
+}

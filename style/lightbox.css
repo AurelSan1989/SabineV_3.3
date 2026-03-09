@@ -25,10 +25,33 @@
     transform: scale(1.05);
 }
 
+.galerie-spectacle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.galerie-spectacle img {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.galerie-spectacle img:hover {
+    transform: scale(1.05);
+}
+
 @media (max-width: 795px) {
     .galerie {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+    }
+
+    .galerie-spectacle {
+        grid-template-columns: 1fr;
     }
 
     .galerie img {
@@ -39,5 +62,10 @@
     .galerie img:last-child {
         width: 100% !important;
         grid-column: 1 / -1;
+    }
+
+    .galerie-spectacle img {
+        width: 100%;
+        height: auto;
     }
 }

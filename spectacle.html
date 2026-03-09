@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/lightbox.css">
 </head>
 <body>
     <header class="header">
@@ -153,62 +153,18 @@
             <div class="article_footer">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/r2Gafl-O8oM?si=MlWBS49pJQOEAhvr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>            
-                <div class="article_contain article-lightbox">
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie1.jpg" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie3.jpg" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie5.jpg" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie4.jpg" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie2.jpg" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie6.jpg" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie7.jpg" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie8.jpg" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie9.jpg" alt="" class="image-resize">
-                    </a>
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="link-galerie">
-                        <img src="img/spectacle/gallerie/gallerie10.jpg" alt="" class="image-resize">
-                    </a>
+                <div class="galerie-spectacle">
+                    <img src="img/spectacle/gallerie/gallerie1.jpg" alt="">
+                    <img src="img/spectacle/gallerie/gallerie3.jpg" alt="">
+                    <img src="img/spectacle/gallerie/gallerie5.jpg" alt="">
+                    <img src="img/spectacle/gallerie/gallerie4.jpg" alt="">
+                    <img src="img/spectacle/gallerie/gallerie2.jpg" alt="">
+                    <img src="img/spectacle/gallerie/gallerie6.jpg" alt="">
+                    <img src="img/spectacle/gallerie/gallerie7.jpg" alt="">
+                    <img src="img/spectacle/gallerie/gallerie8.jpg" alt="">
+                    <img src="img/spectacle/gallerie/gallerie9.jpg" alt="">
+                    <img src="img/spectacle/gallerie/gallerie10.jpg" alt="">
                 </div>
-                <div id="lightbox">
-                    <img src="" alt="media" class="image-lightbox">
-                    <a href="jacascript:void(0)" onclick="lightbox(event)" class="exit">
-                        <span class="material-symbols-outlined">
-                            close
-                        </span>
-                    </a>
-                </div>
-                <script>
-                    function lightbox(event){
-                        if(event.target){
-                            const img = event.target.src;
-                            const imgLightbox = document.querySelector("#lightbox img");
-                            imgLightbox.src = img;
-                            const lightbox = document.getElementById("lightbox");
-                            lightbox.classList.toggle("active");
-                        }
-                        else{
-                            const lightbox = document.getElementById("lightbox");
-                            lightbox.classList.toggle("active");
-                        }
-
-                    }
-                </script>
         </article>
     </main>
     <aside>
@@ -228,10 +184,4 @@
                 <a href="tel:+33679839883"><span class="social-logo">📞</span> 06 79 83 98 83</a>
            </div>
            <div class="mail">
-                <a href="mailto:sab.pianiste@orange.fr"><span class="social-logo">✉️</span> sab.pianiste@orange.fr</a>
-           </div>
-        </div>
-        <div class="copyright">Crée par Aurélien Girodet</div>
-    </footer>
-</body>
-</html>
+                <a href="/cdn-cgi/l/email-protection#423123206c322b232c2b313627022d30232c25276c2430"><span class="social-logo">✉️</span> <span class="__cf_email__" data-cfemail="fa899b98d48a939b9493898e9fba95889b949d9fd49c88">[email&#160;protected]</sp

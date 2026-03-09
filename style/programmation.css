@@ -1,3 +1,10 @@
 .programmation-affiche{
     width: 400px;
+    max-width: 100%;
+}
+
+@media (max-width: 795px) {
+    .programmation-affiche {
+        width: 100%;
+    }
 }

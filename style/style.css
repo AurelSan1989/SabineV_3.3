@@ -17,6 +17,9 @@
 
 
 /* ===== BASE ===== */
+* {
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
@@ -283,6 +286,8 @@ a:hover {
 
 .main img {
     transition: transform .3s ease-in-out;
+    max-width: 100%;
+    height: auto;
 }
 
 .main img:hover {
@@ -333,6 +338,17 @@ article {
 
 .article_contain div a:hover {
     color: var(--blanc-dim);
+}
+
+.article_contain_solo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article_contain_solo p {
+    opacity: .8;
+    font-size: 19px;
 }
 
 .article_footer {
@@ -637,7 +653,11 @@ footer {
 .uppercase        { text-transform: uppercase; }
 .underline        { text-decoration: underline; }
 .bold             { font-weight: bold; }
-.image_center     { width: 500px; margin: 0 auto; }
+.image_center     { 
+    max-width: 500px; 
+    width: 100%;
+    margin: 0 auto; 
+}
 .very-white       { color: var(--blanc); }         
 
 #etoiles {
@@ -716,41 +736,53 @@ footer {
 
     .article_contain {
         grid-template-columns: 1fr;
-    }
-
-    .article_contain img {
-        width: 90%;
-        margin: auto;
-    }
-
-    .article_contain div {
         width: 100%;
     }
 
-    /* .article_footer {
-        width: 90%;
+    .article_contain img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .article_contain > div {
+        width: 100%;
+        box-sizing: border-box;
         margin: auto;
+    }
+
+    
+    
+
+    .article_footer {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .article_footer div {
-        width: 90%;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .article_footer img {
-        width: 90%;
-        margin: auto;
+        width: 100%;
+        height: auto;
     }
 
-    .article_footer iframe {
-        width: 90%;
-        height: fit-content;
+    /* iframe toujours 100% sur mobile */
+    iframe {
+        width: 100% !important;
+        max-width: 100%;
+        height: 250px;
     }
 
     .article_contain_last {
-        width: 90%;
+        width: 100%;
+        box-sizing: border-box;
         margin: auto;
         grid-template-columns: 1fr;
-    } */
+        gap: 40px;
+    }
 
     /* Header — titres */
     .header-title { font-size: 28px; padding-top: 20px; }

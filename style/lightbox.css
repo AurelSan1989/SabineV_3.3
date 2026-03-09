@@ -1,22 +1,21 @@
 .galerie {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    max-width: 590px;
+    gap: 30px;
     margin: 0 auto;
 }
 
 /* La dernière photo seule est centrée */
 .galerie img:last-child {
     grid-column: 1 / -1;
-    width: 280px;
-    height: 210px;
+    width: 500px;
+    height: auto;
     margin: 0 auto;
 }
 
 .main .galerie img {
-    width: 280px;
-    height: 210px;
+    width: 500px;
+    height: auto;
     object-fit: cover;
     border-radius: 4px;
     transition: transform 0.3s ease;
@@ -27,8 +26,18 @@
 }
 
 @media (max-width: 795px) {
+    .galerie {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
     .galerie img {
-        width: 140px;
-        height: 105px;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .galerie img:last-child {
+        width: 100% !important;
+        grid-column: 1 / -1;
     }
 }

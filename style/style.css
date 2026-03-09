@@ -580,6 +580,7 @@ article {
     font-size: 20px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
     transition: transform 0.25s ease-out, background-color 0.25s ease-out;
+    z-index: 300;
 }
 
 .back-to-top:hover {
@@ -659,6 +660,8 @@ footer {
     margin: 0 auto; 
 }
 .very-white       { color: var(--blanc); }         
+.article_contain 
+span.margin-top_more  { display: block; padding-top: 20px; }
 
 #etoiles {
     margin: 0 auto;
